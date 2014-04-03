@@ -1,0 +1,24 @@
+
+<html>
+	<title>Youtube fullscreen bookmarklet</title>
+<body>
+<p>
+	<strong>Instructions</strong>
+	<p>Just drag the link below to your bookmark bar. Then while watching video on youtube click the bookmarklet from your boookmark bar.</p>
+</p>
+<p>
+<a href="javascript:
+var l = document.location;
+var h = l.href;
+if( h.indexOf('watch?v=') !== -1 ) {
+	var url = h.split('watch?v=')[1];
+	l.href = 'https://youtube.googleapis.com/v/'+url;
+}
+else if( h.indexOf('googleapis.com/v/') !== -1  ) {
+	url =  h.split('googleapis.com/v/')[1];
+	l.href = 'http://www.youtube.com/watch?v='+url;
+}
+void(1);">YouTubeFS</a>
+</p>
+</body>
+</html>
